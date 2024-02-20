@@ -1,5 +1,6 @@
 # Library-database-creation-and-querying
 
+The project conducted in the context of the databases course. The aim was to create and querying a database for a library.
 
 **Database Description**:
 
