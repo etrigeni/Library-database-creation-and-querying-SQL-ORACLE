@@ -13,6 +13,7 @@ The project conducted in the context of the databases course. The aim was to cre
 
 
 **OBJECTIVES**:
+
 Task 1: Table Specifications
 Create a table (there is an example in Appendix A) with the database specifications based on the given Entity Relationship Diagram (ERD). You should consider the following:
 • appropriate table name, datatypes, constraints and defaults
