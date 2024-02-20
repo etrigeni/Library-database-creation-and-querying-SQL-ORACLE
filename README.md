@@ -22,7 +22,7 @@ Task 2: Script Files
 Use the ERD and your table specifications to create the following script files (all files should have an appropriate extension with proper details, run commands and comments).
 
 
-**1. create_yourTwoSurnames.txt **
+**1. create_yourTwoSurnames.txt**
 ▪ Create table commands for all tables
 ADVANCED DATABASE SYSTEM ~ 2 ~ GROUP ASSIGNMENT
 ▪ Tables should be created in the correct order to maintain integrity
