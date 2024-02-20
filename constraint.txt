@@ -1,0 +1,123 @@
+--CONSTRAINTS
+
+--PRIMARY KEYS
+
+ALTER TABLE author
+ADD CONSTRAINT pk_author_id
+PRIMARY KEY (author_id);
+
+ALTER TABLE books
+ADD CONSTRAINT pk_isbn
+PRIMARY KEY (isbn);
+
+ALTER TABLE copy
+ADD CONSTRAINT pk_copy_id
+PRIMARY KEY (copy_id);
+
+ALTER TABLE users
+ADD CONSTRAINT pk_user_id
+PRIMARY KEY (user_id);
+
+ALTER TABLE loans
+ADD CONSTRAINT pk_loan_id
+PRIMARY KEY (loan_id);
+
+
+--FOREIGN KEYS
+
+ALTER TABLE books
+ADD CONSTRAINT fk_books_author
+FOREIGN KEY(author_id)
+REFERENCES author(author_id);
+
+ALTER TABLE copy
+ADD CONSTRAINT fk_copy_books
+FOREIGN KEY(isbn)
+REFERENCES books(isbn);
+
+ALTER TABLE loans
+ADD CONSTRAINT fk_loans_user
+FOREIGN KEY(user_id)
+REFERENCES users(user_id);
+
+ALTER TABLE loans
+ADD CONSTRAINT fk_loans_copy
+FOREIGN KEY(copy_id)
+REFERENCES copy(copy_id);
+
+
+--UNIQUE KEYS
+
+ALTER TABLE users
+ADD CONSTRAINT uk_email
+UNIQUE (email);
+
+ALTER TABLE users
+ADD CONSTRAINT uk_contacto
+UNIQUE (contact_number);
+
+
+--CHECK CONSTRAINTS
+
+ALTER TABLE author
+ADD CONSTRAINT ck_a_lastname
+CHECK (a_lastname = UPPER(a_lastname));
+
+ALTER TABLE author
+ADD CONSTRAINT ck_a_lastname_nn
+CHECK (A_LASTNAME IS NOT NULL);
+
+ALTER TABLE author
+ADD CONSTRAINT ck_a_firstname
+CHECK (a_firstname = UPPER(a_firstname));
+
+ALTER TABLE author
+ADD CONSTRAINT ck_a_firstname_nn
+CHECK (A_FIRSTNAME IS NOT NULL);
+
+ALTER TABLE author
+ADD CONSTRAINT ck_country_auth
+CHECK (COUNTRY IN ('GREECE','AMERICAN','FRANCE','SPAIN','ENGLAND'));
+
+ALTER TABLE author
+ADD CONSTRAINT ck_gender_auth
+CHECK (GENDER IN ('M','F','O'));
+
+ALTER TABLE books
+ADD CONSTRAINT ck_genre
+CHECK (GENRE IN ('Novel','Romance','Horror','Childrens','Scientific','Other'));
+
+ALTER TABLE users
+ADD CONSTRAINT ck_us_lastname
+CHECK (us_lastname = UPPER(us_lastname));
+
+ALTER TABLE users
+ADD CONSTRAINT ck_us_lastname_nn
+CHECK (US_LASTNAME IS NOT NULL);
+
+ALTER TABLE users
+ADD CONSTRAINT ck_us_firstname
+CHECK (us_firstname = UPPER(us_firstname));
+
+ALTER TABLE users
+ADD CONSTRAINT ck_us_firstname_nn
+CHECK (US_FIRSTNAME IS NOT NULL);
+
+ALTER TABLE users
+ADD CONSTRAINT ck_email_nn
+CHECK (EMAIL IS NOT NULL);
+
+ALTER TABLE users
+ADD CONSTRAINT ck_contact_number_nn
+CHECK (CONTACT_NUMBER IS NOT NULL);
+
+ALTER TABLE users
+ADD CONSTRAINT ck_gender_us
+CHECK (GENDER IN ('M','F'));
+
+--DESC AUTHOR;
+--DESC BOOKS;
+--DESC COPY;
+--DESC USERS;
+--DESC LOANS;
+
