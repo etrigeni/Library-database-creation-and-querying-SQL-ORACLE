@@ -1,6 +1,6 @@
 # Library-database-creation-and-querying
 
-This project conducted in the context of the databases course, of the postgraduate Data Science.  The aim was to create and querying a database for a library using SQL.
+Create and querying a database for a library using SQL/ORACLE.
 
 **Database Description**:
 
