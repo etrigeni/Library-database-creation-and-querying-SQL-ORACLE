@@ -1,6 +1,6 @@
 # Library-database-creation-and-querying
 
-Create and querying a database for a library using SQL/ORACLE.
+Create and query a database for a library using SQL/ORACLE.
 
 **Database Description**:
 
